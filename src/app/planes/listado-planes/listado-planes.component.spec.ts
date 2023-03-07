@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { ListadoPlanesComponent } from './listado-planes.component';
+
+describe('ListadoPlanesComponent', () => {
+  let component: ListadoPlanesComponent;
+  let fixture: ComponentFixture<ListadoPlanesComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ ListadoPlanesComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(ListadoPlanesComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
