@@ -378,6 +378,9 @@ nav .nav-link {
 nav .nav-link:hover {
 	color: var(--main-color);
 }
+nav span {
+    color: var(--main-color);
+}
 nav form {
 	max-width: 400px;
 	width: 100%;
