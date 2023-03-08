@@ -882,7 +882,13 @@ table td {
 
 @media only screen and (max-width: 850px) {
 
-    
+    sidebar{ 
+        scrollbar-width: normal;
+        scrllbar-color : #777 #555;
+    }
+    html::-webkit-scrollbar{
+        width: 4vw;
+    }
 
     .col-sm-1 {
         width: 8.33%;
