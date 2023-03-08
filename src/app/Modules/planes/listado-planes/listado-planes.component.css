@@ -1,0 +1,22 @@
+.col-12 {
+    width: 100%;
+}
+
+
+.table-container {
+    position: relative;
+    overflow: auto;
+    height: 300px;
+  }
+
+  thead {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+  }
+
+  td {
+    border: 1px solid #ccc;
+    padding: 5px;
+  }

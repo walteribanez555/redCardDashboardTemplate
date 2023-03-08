@@ -1,4 +1,6 @@
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule, Routes } from "@angular/router";
 import { CrearCategoriaComponent } from "./crear-categoria/crear-categoria.component";
 import { CrearCoberturaComponent } from "./crear-cobertura/crear-cobertura.component";
@@ -37,6 +39,7 @@ const routes : Routes = [
 @NgModule({
     imports:[
         RouterModule.forChild(routes),
+
     ],
     exports:[RouterModule],
 })

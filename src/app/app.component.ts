@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import { routeSideNav } from './models/routes.model';
+import { routeSideNav } from './models/Pages/routes.model';
+
 
 
 
@@ -13,11 +14,6 @@ import { routeSideNav } from './models/routes.model';
 ]
 })
 export class AppComponent implements OnInit {
-
-
-
-  
-
 
 
 
@@ -189,12 +185,21 @@ export class AppComponent implements OnInit {
   ];
 
   constructor(){
-
-    
-
     
   }
-  ngOnInit(){}
+  ngOnInit(){
+    // this.clienteServicio.getClientes() 
+    //   .subscribe((data)=> {
+    //     console.log(data);
+    //   });
+
+    // this.clienteServicio.getClienteById(23232323)
+    //   .subscribe((data)=> {
+    //     console.log(data);
+    //   })
+      
+
+  }
 
   cargarHeader(direccion : string){
     this.actualDir = direccion;

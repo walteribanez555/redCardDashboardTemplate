@@ -1,12 +1,13 @@
 import {  NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CampDescuentosRoutingModule } from './camp-descuentos/camp-descuentos-routing.module';
-import { CuponesRoutingModule } from './cupones/cupones-routing.module';
-import { PlanesRoutingModule } from './planes/planes-routing.module';
-import { PolizasRoutingModule } from './polizas/polizas-routing.module';
-import { ReportesRoutingModule } from './reportes/reportes-routing.module';
-import { SitioWebRoutingModule } from './sitio-web/sitio-web-routes.module';
-import { UsuariosRoutingModule } from './usuarios/usuarios-routing.module';
+import { CampDescuentosRoutingModule } from './Modules/camp-descuentos/camp-descuentos-routing.module';
+import { CuponesRoutingModule } from './Modules/cupones/cupones-routing.module';
+import { PlanesRoutingModule } from './Modules/planes/planes-routing.module';
+import { PlanesModule } from './Modules/planes/planes.module';
+import { PolizasRoutingModule } from './Modules/polizas/polizas-routing.module';
+import { ReportesRoutingModule } from './Modules/reportes/reportes-routing.module';
+import { SitioWebRoutingModule } from './Modules/sitio-web/sitio-web-routes.module';
+import { UsuariosRoutingModule } from './Modules/usuarios/usuarios-routing.module';
 
 
 
@@ -25,7 +26,7 @@ const routes : Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('./sitio-web/sitio-web-routes.module').then(m => m.SitioWebRoutingModule)
+    loadChildren: () => import('./Modules/sitio-web/sitio-web-routes.module').then(m => m.SitioWebRoutingModule)
   }
   
   
@@ -38,7 +39,7 @@ const routes : Routes = [
     UsuariosRoutingModule,
     CampDescuentosRoutingModule,
     CuponesRoutingModule,
-    PlanesRoutingModule,
+    PlanesModule,
     PolizasRoutingModule,
     ReportesRoutingModule,
     SitioWebRoutingModule

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ListadoPolizasComponent } from './listado-polizas/listado-polizas.component';
 import { GenerarPolizasComponent } from './generar-polizas/generar-polizas.component';
 import { GenerarCotizacionComponent } from './generar-cotizacion/generar-cotizacion.component';
-import { polizasRoutingModule } from './polizas-routing.module';
+import { PolizasRoutingModule } from './polizas-routing.module';
 
 
 
@@ -15,7 +15,7 @@ import { polizasRoutingModule } from './polizas-routing.module';
   ],
   imports: [
     CommonModule,
-    polizasRoutingModule
+    PolizasRoutingModule
   ],
   exports: [ 
     ListadoPolizasComponent,
