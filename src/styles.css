@@ -380,7 +380,7 @@ nav .nav-link {
 nav .nav-link:hover {
 	color: var(--main-color);
 }
-nav span {
+.main-header span {
     color: var(--main-color);
     display:  flex;
     flex-direction: column;
@@ -882,14 +882,7 @@ table td {
 
 @media only screen and (max-width: 850px) {
 
-    nav span {
-        color: var(--main-color);
-        display:  flex;
-        flex-direction: column;
-        font-size: 10px;
     
-        
-    }
 
     .col-sm-1 {
         width: 8.33%;

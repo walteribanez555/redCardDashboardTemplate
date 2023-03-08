@@ -197,16 +197,10 @@ export class AppComponent implements OnInit {
   ngOnInit(){}
 
   cargarHeader(direccion : string){
-    this.actualDir = this.replaceAll(direccion);
+    this.actualDir = direccion;
   }
 
-   replaceAll(str: string): string {
-    const replacedStr = str.replace(/\//g, '>').replace(/-/g, ' ');
-    const capitalizedStr = replacedStr.replace(/(?:^|\s)\S/g, (a) => a.toUpperCase());
-    const finalStr = capitalizedStr.replace(/(?<=>|\s)\S/g, (a) => a.toUpperCase());
-    return finalStr;
-  }
-
+   
   toggleDropdown(menuItem : any) {
     menuItem.isDropdownOpen = !menuItem.isDropdownOpen;
     menuItem.dropdownHeight = menuItem.isDropdownOpen ? menuItem.submenuItems.length * 50 + 'px' : '0';
