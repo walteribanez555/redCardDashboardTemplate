@@ -1,5 +1,6 @@
-import { Component, OnInit, Renderer2,ViewChild,ElementRef } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { routeSideNav } from './models/routes.model';
+
 
 
 
@@ -12,6 +13,13 @@ import { routeSideNav } from './models/routes.model';
 ]
 })
 export class AppComponent implements OnInit {
+
+
+
+  
+
+
+
 
   actualDir : string = 'Dashboard';
   display_sidenav = false;
@@ -180,7 +188,12 @@ export class AppComponent implements OnInit {
     
   ];
 
-  constructor(){}
+  constructor(){
+
+    
+
+    
+  }
   ngOnInit(){}
 
   cargarHeader(direccion : string){
