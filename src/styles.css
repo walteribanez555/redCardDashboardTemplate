@@ -384,7 +384,8 @@ nav span {
     color: var(--main-color);
     display:  flex;
     flex-direction: column;
-    
+    font-size: small;
+
     
 }
 nav form {
