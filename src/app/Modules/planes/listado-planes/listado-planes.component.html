@@ -139,9 +139,9 @@
     </div> -->
 
     <div class="">
-        <div class="  col-12" >
+        <div class=" overflow-scroll  col-12" >
             
-            <div class="table-container overflow-scroll" #tableContainer>
+            <div class="table-container " #tableContainer>
                 <table>
                   <thead>
                     <tr>
@@ -172,17 +172,17 @@
                       <td>{{servicio.moneda}}</td>
                     </tr>
                     <tr *ngFor="let servicio of listado_Servicio">
-                        <td>{{servicio.servicio}}</td>
-                        <td>{{servicio.descripcion}}</td>
-                        <td>{{servicio.precio_base}}</td>
-                        <td>{{servicio.edad_base}}</td>
-                        <td>{{servicio.edad_limite}}</td>
-                        <td>{{servicio.cobertura_global}}</td>
-                        <td>{{servicio.tiempo_limite}}</td>
-                        <td>{{servicio.cupones}}</td>
-                        <td> {{servicio.descuento}} </td>
-                        <td>{{servicio.moneda}}</td>
-                      </tr>
+                      <td>{{servicio.servicio}}</td>
+                      <td>{{servicio.descripcion}}</td>
+                      <td>{{servicio.precio_base}}</td>
+                      <td>{{servicio.edad_base}}</td>
+                      <td>{{servicio.edad_limite}}</td>
+                      <td>{{servicio.cobertura_global}}</td>
+                      <td>{{servicio.tiempo_limite}}</td>
+                      <td>{{servicio.cupones}}</td>
+                      <td> {{servicio.descuento}} </td>
+                      <td>{{servicio.moneda}}</td>
+                    </tr>
                     
                    
                   </tbody>

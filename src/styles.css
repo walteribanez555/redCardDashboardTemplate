@@ -38,6 +38,8 @@
 }
 
 body {
+    
+    overflow: hidden;
     font-family: "Roboto", sans-serif;
     background-color: var(--body-bg);
     color: var(--text-color);
@@ -527,7 +529,7 @@ nav .btn-outline{
 }
 
 .main-content{
-    padding: 0px 0 0px 0px;
+    padding: 0px 0px 0px 0px;
     
     
     
@@ -687,7 +689,7 @@ table td {
 }
 
 .overflow-scroll {
-    overflow-x: auto;
+    overflow-y: auto;
 }
 
 .overlay {
