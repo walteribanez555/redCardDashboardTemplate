@@ -39,7 +39,7 @@
 
 body {
     
-    overflow: hidden;
+    
     font-family: "Roboto", sans-serif;
     background-color: var(--body-bg);
     color: var(--text-color);
@@ -323,7 +323,7 @@ a {
 
 .main {
     padding-left: var(--sidebar-size);
-    height: 100vh;
+    
 }
 
 .main-header {

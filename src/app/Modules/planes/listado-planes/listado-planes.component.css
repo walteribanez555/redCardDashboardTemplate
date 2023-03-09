@@ -1,7 +1,4 @@
-.col-12 {
-    width: 100%;
-    
-}
+
 
 
 
@@ -10,11 +7,13 @@ table {
   min-width: 1000px;
   
   
+  
 }
 
 .table-container {
     position: relative;
     height: 100vh;
+    overflow: auto;
     
     
     
