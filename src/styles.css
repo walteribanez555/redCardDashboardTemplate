@@ -42,6 +42,7 @@ body {
     background-color: var(--body-bg);
     color: var(--text-color);
     position: relative;
+    overflow: hidden;
     
 }
 
@@ -774,6 +775,7 @@ table td {
     flex-wrap: wrap;
     margin: 0 0px;
     width: 100%;
+    overflow: auto;
     
 }
 

@@ -12,7 +12,7 @@ table {
 
 .table-container {
     position: relative;
-    overflow: auto;
+    
     height: 100vh ;
   }
 
