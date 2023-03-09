@@ -781,6 +781,7 @@ table td {
     display: flex;
     flex-wrap: wrap;
     margin: 0 0px;
+    padding-bottom: 10px;
     width: 100%;
     overflow: auto;
     

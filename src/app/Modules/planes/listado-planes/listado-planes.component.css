@@ -12,8 +12,9 @@ table {
 
 .table-container {
     position: relative;
-    height: 100vh;
+    height: 85vh;
     overflow: auto;
+    
     
     
     
