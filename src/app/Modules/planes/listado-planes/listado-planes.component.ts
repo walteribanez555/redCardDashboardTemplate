@@ -16,7 +16,17 @@ export class ListadoPlanesComponent {
               {name: 'Sarah', age: 50, city: 'Houston'},    
               {name: 'Tom', age: 55, city: 'Seattle'},    
               {name: 'Linda', age: 60, city: 'Boston'},    
-              {name: 'David', age: 65, city: 'Dallas'},    
+              {name: 'David', age: 67, city: 'Dallas'},    
+              {name: 'Mary', age: 70, city: 'Washington DC'},
+              {name: 'John', age: 25, city: 'New York'},
+              {name: 'Jane', age: 30, city: 'San Francisco'},    
+              {name: 'Bob', age: 35, city: 'Chicago'},    
+              {name: 'Alice', age: 40, city: 'Los Angeles'},    
+              {name: 'Peter', age: 45, city: 'Miami'},    
+              {name: 'Sarah', age: 50, city: 'Houston'},    
+              {name: 'Tom', age: 55, city: 'Seattle'},    
+              {name: 'Linda', age: 60, city: 'Boston'},    
+              {name: 'David', age: 67, city: 'Dallas'},    
               {name: 'Mary', age: 70, city: 'Washington DC'}  
             ];
 
