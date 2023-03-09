@@ -23,7 +23,7 @@ table {
     position: sticky;
     top: 0;
     background-color: var(--body-bg);
-    z-index: 2;
+    
   }
   table thead tr {
     text-align: left;
