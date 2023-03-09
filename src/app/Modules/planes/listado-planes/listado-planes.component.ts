@@ -1,36 +1,30 @@
 
-import { Component, HostListener, ElementRef } from '@angular/core';
+import { Component, HostListener, ElementRef,OnInit } from '@angular/core';
+import { Servicio } from 'src/app/models/Data/Servicio';
+import { ServiciosService } from 'src/app/services/servicios.service';
 
 @Component({
   selector: 'app-listado-planes',
   templateUrl: './listado-planes.component.html',
   styleUrls: ['./listado-planes.component.css']
 })
-export class ListadoPlanesComponent {
+export class ListadoPlanesComponent implements OnInit {
 
-  rows = [    {name: 'John', age: 25, city: 'New York'},
-              {name: 'Jane', age: 30, city: 'San Francisco'},    
-              {name: 'Bob', age: 35, city: 'Chicago'},    
-              {name: 'Alice', age: 40, city: 'Los Angeles'},    
-              {name: 'Peter', age: 45, city: 'Miami'},    
-              {name: 'Sarah', age: 50, city: 'Houston'},    
-              {name: 'Tom', age: 55, city: 'Seattle'},    
-              {name: 'Linda', age: 60, city: 'Boston'},    
-              {name: 'David', age: 67, city: 'Dallas'},    
-              {name: 'Mary', age: 70, city: 'Washington DC'},
-              {name: 'John', age: 25, city: 'New York'},
-              {name: 'Jane', age: 30, city: 'San Francisco'},    
-              {name: 'Bob', age: 35, city: 'Chicago'},    
-              {name: 'Alice', age: 40, city: 'Los Angeles'},    
-              {name: 'Peter', age: 45, city: 'Miami'},    
-              {name: 'Sarah', age: 50, city: 'Houston'},    
-              {name: 'Tom', age: 55, city: 'Seattle'},    
-              {name: 'Linda', age: 60, city: 'Boston'},    
-              {name: 'David', age: 67, city: 'Dallas'},    
-              {name: 'Mary', age: 70, city: 'Washington DC'}  
-            ];
+  listado_Servicio: Servicio[] = [];
 
-  constructor(private elRef: ElementRef) {}
+  constructor(
+      private elRef: ElementRef,
+      private servicios : ServiciosService
+      ) {}
+
+
+
+      ngOnInit(){
+        this.servicios.getServicios().subscribe(
+          (data)=> {
+            this.listado_Servicio = data.filter(item => item.status === 1);
+          })
+      }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

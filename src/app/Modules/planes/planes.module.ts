@@ -1,5 +1,8 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
 import { NgModule } from '@angular/core';
+import { ServiciosService } from 'src/app/services/servicios.service';
 import { CrearCategoriaComponent } from './crear-categoria/crear-categoria.component';
 import { CrearCoberturaComponent } from './crear-cobertura/crear-cobertura.component';
 import { CrearPlanComponent } from './crear-plan/crear-plan.component';
@@ -28,6 +31,10 @@ import { PlanesRoutingModule } from './planes-routing.module';
     CrearCoberturaComponent,
     CrearPlanComponent,
     ListadoPlanesComponent
+  ],
+  providers: [
+    
   ]
+  
 })
 export class PlanesModule { }

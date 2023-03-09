@@ -28,6 +28,8 @@ table {
 
     table th,
     table td {
-        padding: 20px 0;
+        font-size: small;
+        text-align: left;
+        position: sticky;
         border-bottom: 1px solid var(--border-color);
     }

@@ -145,16 +145,43 @@
                 <table>
                   <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Age</th>
-                      <th>City</th>
+                      <th>Servicio</th>
+                      <th>Descripcion</th>
+                      <th>Precio Base</th>
+                      <th>Edad base</th>
+                      <th>Edad limite</th>
+                      <th>Cobertura global</th>
+                      <th>Tiempo limite</th>
+                      <th>Cupones</th>
+                      <th>Descuento</th>
+                      <th>Moneda</th>
+
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let row of rows">
-                      <td>{{row.name}}</td>
-                      <td>{{row.age}}</td>
-                      <td class="dot">{{row.city}}</td>
+                    <tr *ngFor="let servicio of listado_Servicio">
+                      <td>{{servicio.servicio}}</td>
+                      <td>{{servicio.descripcion}}</td>
+                      <td>{{servicio.precio_base}}</td>
+                      <td>{{servicio.edad_base}}</td>
+                      <td>{{servicio.edad_limite}}</td>
+                      <td>{{servicio.cobertura_global}}</td>
+                      <td>{{servicio.tiempo_limite}}</td>
+                      <td>{{servicio.cupones}}</td>
+                      <td> {{servicio.descuento}} </td>
+                      <td>{{servicio.moneda}}</td>
+                      
+                      
+
+
+
+
+
+
+
+
+
+                      
                     </tr>
                   </tbody>
                 </table>

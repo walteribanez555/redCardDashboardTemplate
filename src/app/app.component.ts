@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import { routeSideNav } from './models/Pages/routes.model';
 
 
@@ -184,7 +184,7 @@ export class AppComponent implements OnInit {
     
   ];
 
-  constructor(){
+  constructor(private cdr : ChangeDetectorRef){
     
   }
   ngOnInit(){
@@ -203,6 +203,7 @@ export class AppComponent implements OnInit {
 
   cargarHeader(direccion : string){
     this.actualDir = direccion;
+    this.cdr.detectChanges();
   }
 
    

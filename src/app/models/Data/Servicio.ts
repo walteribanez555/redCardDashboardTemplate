@@ -13,6 +13,6 @@ export interface Servicio {
     descuento : number,
     moneda : string,
     img : string,
-    status : string
+    status : number
     
 }

@@ -4,6 +4,8 @@ import { ListadoPolizasComponent } from './listado-polizas/listado-polizas.compo
 import { GenerarPolizasComponent } from './generar-polizas/generar-polizas.component';
 import { GenerarCotizacionComponent } from './generar-cotizacion/generar-cotizacion.component';
 import { PolizasRoutingModule } from './polizas-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ServiciosService } from 'src/app/services/servicios.service';
 
 
 
@@ -15,12 +17,16 @@ import { PolizasRoutingModule } from './polizas-routing.module';
   ],
   imports: [
     CommonModule,
+  
     PolizasRoutingModule
   ],
   exports: [ 
     ListadoPolizasComponent,
     GenerarPolizasComponent,
     GenerarCotizacionComponent
+  ],
+  providers:[
+    
   ]
 })
 export class PolizasModule { }
