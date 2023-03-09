@@ -42,7 +42,7 @@ body {
     background-color: var(--body-bg);
     color: var(--text-color);
     position: relative;
-    overflow: hidden;
+    
     
 }
 
