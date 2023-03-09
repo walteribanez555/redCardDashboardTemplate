@@ -14,7 +14,7 @@ table {
 
 .table-container {
     position: relative;
-    height: max-content;
+    height: 100vh;
     
     
   }
