@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import {  NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CampDescuentosRoutingModule } from './Modules/camp-descuentos/camp-descuentos-routing.module';
@@ -17,7 +18,7 @@ const routes : Routes = [
     path : '**',
     redirectTo: 'usuarios/agregar-usuarios',
     pathMatch : 'full'
-    
+
   },
   {
     path: '',
@@ -28,26 +29,27 @@ const routes : Routes = [
     path: '',
     loadChildren: () => import('./Modules/sitio-web/sitio-web-routes.module').then(m => m.SitioWebRoutingModule)
   }
-  
-  
+
+
 ]
 
 @NgModule({
   imports: [
-    
+
     RouterModule.forRoot(routes),
     UsuariosRoutingModule,
     CampDescuentosRoutingModule,
     CuponesRoutingModule,
-    PlanesModule,
+    PlanesRoutingModule,
     PolizasRoutingModule,
     ReportesRoutingModule,
-    SitioWebRoutingModule
+    SitioWebRoutingModule,
+
   ],
   exports: [RouterModule],
-  
+
 })
-export class AppRoutingModule { 
-    
+export class AppRoutingModule {
+
 
  }
