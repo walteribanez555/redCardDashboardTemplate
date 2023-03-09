@@ -22,6 +22,7 @@ import { PlanesRoutingModule } from './planes-routing.module';
   ],
   imports: [
     CommonModule,
+    
     PlanesRoutingModule,
 
 
@@ -33,7 +34,7 @@ import { PlanesRoutingModule } from './planes-routing.module';
     ListadoPlanesComponent
   ],
   providers: [
-    
+    ServiciosService
   ]
   
 })

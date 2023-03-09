@@ -39,9 +39,7 @@ export class ListadoPlanesComponent implements OnInit {
     if (containerRect.top + headerRect.height > window.innerHeight ||
         containerRect.bottom - lastRowRect.height < 0) {
       tableHeader.style.visibility = 'hidden';
-      for (let i = 0; i < tableRows.length; i++) {
-        tableRows[i].style.visibility = 'hidden';
-      }
+      
     } else {
       tableHeader.style.visibility = 'visible';
       for (let i = 0; i < tableRows.length; i++) {
