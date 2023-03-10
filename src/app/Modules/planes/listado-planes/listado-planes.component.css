@@ -55,7 +55,7 @@ table {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 745px) {
   .animated-component {
     position: absolute;
     top: 0;
