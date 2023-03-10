@@ -1,7 +1,7 @@
 
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from "@angular/router";
 import { CrearCategoriaComponent } from "./crear-categoria/crear-categoria.component";
 import { CrearCoberturaComponent } from "./crear-cobertura/crear-cobertura.component";
@@ -40,7 +40,8 @@ const routes : Routes = [
 @NgModule({
     imports:[
         RouterModule.forChild(routes),
-        HttpClientModule
+        HttpClientModule,
+        BrowserAnimationsModule
 
     ],
     exports:[RouterModule],

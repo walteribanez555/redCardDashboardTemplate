@@ -1,193 +1,48 @@
-<!-- 
-<div class="row ">
-    <"div class="box-body overflow-scroll col-12 >
 
-            <div class="box">
-                <div class="box-header">
-                    Recent orders
-                </div>
-                <div class="box-body overflow-scroll">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Customer</th>
-                                <th>Date</th>
-                                <th>Order status</th>
-                                <th>Payment status</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>#2345</td>
-                                <td>
-                                    <div class="order-owner">
-                                        <img src="./images/user-image.jpg" alt="user image">
-                                        <span>tuat tran anh</span>
-                                    </div>
-                                </td>
-                                <td>2021-05-09</td>
-                                <td>
-                                    <span class="order-status order-ready">
-                                        Ready
-                                    </span>
-                                </td>
-                                <td>
-                                    <div class="payment-status payment-pending">
-                                        <div class="dot"></div>
-                                        <span>Pending</span>
-                                    </div>
-                                </td>
-                                <td>$123.45</td>
-                            </tr>
-                            <tr>
-                                <td>#2345</td>
-                                <td>
-                                    <div class="order-owner">
-                                        <img src="./images/user-image-2.png" alt="user image">
-                                        <span>John doe</span>
-                                    </div>
-                                </td>
-                                <td>2021-05-09</td>
-                                <td>
-                                    <span class="order-status order-shipped">
-                                        Shipped
-                                    </span>
-                                </td>
-                                <td>
-                                    <div class="payment-status payment-paid">
-                                        <div class="dot"></div>
-                                        <span>Paid</span>
-                                    </div>
-                                </td>
-                                <td>$123.45</td>
-                            </tr>
-                            <tr>
-                                <td>#2345</td>
-                                <td>
-                                    <div class="order-owner">
-                                        <img src="./images/user-image-3.png" alt="user image">
-                                        <span>evelyn</span>
-                                    </div>
-                                </td>
-                                <td>2021-05-09</td>
-                                <td>
-                                    <span class="order-status order-shipped">
-                                        Shipped
-                                    </span>
-                                </td>
-                                <td>
-                                    <div class="payment-status payment-paid">
-                                        <div class="dot"></div>
-                                        <span>Paid</span>
-                                    </div>
-                                </td>
-                                <td>$123.45</td>
-                            </tr>
-                            <tr>
-                                <td>#2345</td>
-                                <td>
-                                    <div class="order-owner">
-                                        <img src="./images/user-image-2.png" alt="user image">
-                                        <span>John doe</span>
-                                    </div>
-                                </td>
-                                <td>2021-05-09</td>
-                                <td>
-                                    <span class="order-status order-shipped">
-                                        Shipped
-                                    </span>
-                                </td>
-                                <td>
-                                    <div class="payment-status payment-paid">
-                                        <div class="dot"></div>
-                                        <span>Paid</span>
-                                    </div>
-                                </td>
-                                <td>$123.45</td>
-                            </tr>
-                            <tr>
-                                <td>#2345</td>
-                                <td>
-                                    <div class="order-owner">
-                                        <img src="./images/user-image-3.png" alt="user image">
-                                        <span>evelyn</span>
-                                    </div>
-                                </td>
-                                <td>2021-05-09</td>
-                                <td>
-                                    <span class="order-status order-shipped">
-                                        Shipped
-                                    </span>
-                                </td>
-                                <td>
-                                    <div class="payment-status payment-paid">
-                                        <div class="dot"></div>
-                                        <span>Paid</span>
-                                    </div>
-                                </td>
-                                <td>$123.45</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        
-        
+
+    <div class="">
+        <div class="col-12">
+          <div class="table-container" #tableContainer>
+            <table>
+              <thead>
+                <tr>
+                  <th>Servicio</th>
+                  <th>Descripcion</th>
+                  <th>Precio Base</th>
+                  <th>Edad base</th>
+                  <th>Edad limite</th>
+                  <th>Cobertura global</th>
+                  <th>Tiempo limite</th>
+                  <th>Cupones</th>
+                  <th>Descuento</th>
+                  <th>Moneda</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let servicio of listado_Servicio">
+                  <td  (click)="showDetails()" >{{servicio.servicio}}</td>
+                  <td>{{servicio.descripcion}}</td>
+                  <td>{{servicio.precio_base}}</td>
+                  <td>{{servicio.edad_base}}</td>
+                  <td>{{servicio.edad_limite}}</td>
+                  <td>{{servicio.cobertura_global}}</td>
+                  <td>{{servicio.tiempo_limite}}</td>
+                  <td>{{servicio.cupones}}</td>
+                  <td>{{servicio.descuento}}</td>
+                  <td>{{servicio.moneda}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          
         </div>
-    </div> -->
+          <div class="animated-component" *ngIf="showComponent" [@slideIn]>
+            <span  >Hola mundo</span>
+            <button (click)="showDetails()">Close</button>
+          </div>
+      </div>
 
-    <div class="row" >
-        <div class="  col-12" >
-            
-            <div class="table-container" #tableContainer>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Servicio</th>
-                      <th>Descripcion</th>
-                      <th>Precio Base</th>
-                      <th>Edad base</th>
-                      <th>Edad limite</th>
-                      <th>Cobertura global</th>
-                      <th>Tiempo limite</th>
-                      <th>Cupones</th>
-                      <th>Descuento</th>
-                      <th>Moneda</th>
 
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let servicio of listado_Servicio">
-                      <td>{{servicio.servicio}}</td>
-                      <td>{{servicio.descripcion}}</td>
-                      <td>{{servicio.precio_base}}</td>
-                      <td>{{servicio.edad_base}}</td>
-                      <td>{{servicio.edad_limite}}</td>
-                      <td>{{servicio.cobertura_global}}</td>
-                      <td>{{servicio.tiempo_limite}}</td>
-                      <td>{{servicio.cupones}}</td>
-                      <td> {{servicio.descuento}} </td>
-                      <td>{{servicio.moneda}}</td>
-                    </tr>
-                    <tr *ngFor="let servicio of listado_Servicio">
-                      <td>{{servicio.servicio}}</td>
-                      <td>{{servicio.descripcion}}</td>
-                      <td>{{servicio.precio_base}}</td>
-                      <td>{{servicio.edad_base}}</td>
-                      <td>{{servicio.edad_limite}}</td>
-                      <td>{{servicio.cobertura_global}}</td>
-                      <td>{{servicio.tiempo_limite}}</td>
-                      <td>{{servicio.cupones}}</td>
-                      <td> {{servicio.descuento}} </td>
-                      <td>{{servicio.moneda}}</td>
-                    </tr>
-                    
-                   
-                  </tbody>
-                </table>
-              </div>
-            
-        <div> 
-    </div>
+      
+   

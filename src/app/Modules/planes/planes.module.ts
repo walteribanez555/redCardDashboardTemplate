@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgModule } from '@angular/core';
 import { ServiciosService } from 'src/app/services/servicios.service';
@@ -12,16 +14,20 @@ import { ListadoPlanesComponent } from './listado-planes/listado-planes.componen
 import { PlanesRoutingModule } from './planes-routing.module';
 
 
+
 @NgModule({
   declarations: [
     CrearCategoriaComponent,
     CrearCoberturaComponent,
     CrearPlanComponent,
-    ListadoPlanesComponent
+    ListadoPlanesComponent,
+
 
   ],
   imports: [
     CommonModule,
+    BrowserAnimationsModule,
+
     
     PlanesRoutingModule,
 

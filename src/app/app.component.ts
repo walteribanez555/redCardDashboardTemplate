@@ -24,39 +24,39 @@ export class AppComponent implements OnInit {
   
   menuItems : routeSideNav[] = [  
     {
-      label: 'Usuarios & Accesos',
+      label: 'Usuarios y Acceso',
       isDropdownOpen: false,
       dropdownHeight: '0',
       submenuItems: [
         {
-          label: 'Buscar usuarios',
+          label: 'Encontrar Usuarios',
           route: 'usuarios/listado-usuarios'
         },
         {
-          label: 'Crear usuarios',
+          label: 'Crear Usuarios',
           route: 'usuarios/agregado-usuarios'
         }
       ]
     },
     {
-      label: 'Plans',
+      label: 'Planes',
       isDropdownOpen: false,
       dropdownHeight: '0',
       submenuItems: [
         {
-          label: 'Find Plans',
+          label: 'Encontrar Plan',
           route: 'planes/listado-planes'
         },
         {
-          label: 'Crear plan',
+          label: 'Crear Plan',
           route: 'planes/crear-cobertura'
         },
         {
-          label: 'Crear nueva categoria',
+          label: 'Create nueva categoria',
           route: 'planes/crear-categoria'
         },
         {
-          label: 'Crear nueva cobertura',
+          label: 'Crear nueva covertura',
           route: 'planes/crear-cobertura'
         }
       ]

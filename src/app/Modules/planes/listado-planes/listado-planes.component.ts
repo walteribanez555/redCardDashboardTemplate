@@ -2,15 +2,36 @@
 import { Component, HostListener, ElementRef,OnInit } from '@angular/core';
 import { Servicio } from 'src/app/models/Data/Servicio';
 import { ServiciosService } from 'src/app/services/servicios.service';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-listado-planes',
   templateUrl: './listado-planes.component.html',
-  styleUrls: ['./listado-planes.component.css']
+  styleUrls: ['./listado-planes.component.css'],
+  animations: [ 
+    trigger('slideIn', [
+      transition(':enter', [
+        style({ transform: 'translateX(100%)' }),
+        animate('500ms ease', style({ transform: 'translateX(0)' }))
+      ]),
+      transition(':leave', [
+        animate('500ms ease', style({ transform: 'translateX(100%)' }))
+      ])
+    ]),
+
+  ]
+  
 })
 export class ListadoPlanesComponent implements OnInit {
 
   listado_Servicio: Servicio[] = [];
+
+  showComponent = false;
+
+  showDetails() {
+    
+    this.showComponent = !this.showComponent;
+  }
 
   constructor(
       private elRef: ElementRef,
@@ -47,4 +68,9 @@ export class ListadoPlanesComponent implements OnInit {
       }
     }
   }
+
+  
+
+
+
 }
