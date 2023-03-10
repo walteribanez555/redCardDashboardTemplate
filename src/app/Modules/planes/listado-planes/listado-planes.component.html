@@ -31,16 +31,29 @@
                   <td>{{servicio.descuento}}</td>
                   <td>{{servicio.moneda}}</td>
                 </tr>
+                <tr *ngFor="let servicio of listado_Servicio">
+                  <td  (click)="showDetails()" >{{servicio.servicio}}</td>
+                  <td>{{servicio.descripcion}}</td>
+                  <td>{{servicio.precio_base}}</td>
+                  <td>{{servicio.edad_base}}</td>
+                  <td>{{servicio.edad_limite}}</td>
+                  <td>{{servicio.cobertura_global}}</td>
+                  <td>{{servicio.tiempo_limite}}</td>
+                  <td>{{servicio.cupones}}</td>
+                  <td>{{servicio.descuento}}</td>
+                  <td>{{servicio.moneda}}</td>
+                </tr>
+                
               </tbody>
             </table>
           </div>
-
-          
-        </div>
-          <div class="animated-component" *ngIf="showComponent" [@slideIn]>
+          <div class="animated-component" [class.active]="showComponent">
             <span  >Hola mundo</span>
             <button (click)="showDetails()">Close</button>
           </div>
+          
+        </div>
+          
       </div>
 
 

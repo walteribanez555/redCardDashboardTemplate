@@ -2,7 +2,7 @@
 import { Component, HostListener, ElementRef,OnInit } from '@angular/core';
 import { Servicio } from 'src/app/models/Data/Servicio';
 import { ServiciosService } from 'src/app/services/servicios.service';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { trigger,  style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-listado-planes',
