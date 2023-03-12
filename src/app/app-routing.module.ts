@@ -1,15 +1,16 @@
-import { CommonModule } from '@angular/common';
+
 import {  NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CampDescuentosRoutingModule } from './Modules/camp-descuentos/camp-descuentos-routing.module';
-import { CuponesRoutingModule } from './Modules/cupones/cupones-routing.module';
-import { PlanesRoutingModule } from './Modules/planes/planes-routing.module';
-import { PlanesModule } from './Modules/planes/planes.module';
-import { PolizasRoutingModule } from './Modules/polizas/polizas-routing.module';
-import { ReportesRoutingModule } from './Modules/reportes/reportes-routing.module';
-import { SitioWebRoutingModule } from './Modules/sitio-web/sitio-web-routes.module';
-import { UsuariosRoutingModule } from './Modules/usuarios/usuarios-routing.module';
+import { CommonModule } from '@angular/common';
 
+import { SitioWebRoutingModule } from './Modules/sitio-web/sitio-web-routes.module';
+
+import { PlanesModule } from './Modules/planes/planes.module';
+import { CuponesModule } from './Modules/cupones/cupones.module';
+import { CampDescuentosModule } from './Modules/camp-descuentos/camp-descuentos.module';
+import { UsuariosModule } from './Modules/usuarios/usuarios.module';
+import { PolizasModule } from './Modules/polizas/polizas.module';
+import { ReportesModule } from './Modules/reportes/reportes.module';
 
 
 
@@ -37,13 +38,14 @@ const routes : Routes = [
   imports: [
 
     RouterModule.forRoot(routes),
-    UsuariosRoutingModule,
-    CampDescuentosRoutingModule,
-    CuponesRoutingModule,
-    PlanesRoutingModule,
-    PolizasRoutingModule,
-    ReportesRoutingModule,
+    UsuariosModule,
+    CampDescuentosModule,
+    CuponesModule,
+    PlanesModule,
+    PolizasModule,
+    ReportesModule,
     SitioWebRoutingModule,
+    CommonModule,
 
   ],
   exports: [RouterModule],

@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
           route: 'planes/crear-categoria'
         },
         {
-          label: 'Crear nueva covertura',
+          label: 'Crear nueva cobertura',
           route: 'planes/crear-cobertura'
         }
       ]

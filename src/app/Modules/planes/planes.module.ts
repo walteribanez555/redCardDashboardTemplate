@@ -12,6 +12,8 @@ import { ListadoPlanesComponent } from './listado-planes/listado-planes.componen
 
 
 import { PlanesRoutingModule } from './planes-routing.module';
+import { ServicesModule } from 'src/app/services/services.module';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 
 
 
@@ -27,9 +29,9 @@ import { PlanesRoutingModule } from './planes-routing.module';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-
-    
     PlanesRoutingModule,
+    ServicesModule,
+    PipesModule
 
 
   ],
@@ -40,7 +42,7 @@ import { PlanesRoutingModule } from './planes-routing.module';
     ListadoPlanesComponent
   ],
   providers: [
-    ServiciosService
+    
   ]
   
 })

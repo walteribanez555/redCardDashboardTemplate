@@ -5,7 +5,9 @@ import { GenerarPolizasComponent } from './generar-polizas/generar-polizas.compo
 import { GenerarCotizacionComponent } from './generar-cotizacion/generar-cotizacion.component';
 import { PolizasRoutingModule } from './polizas-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { ServiciosService } from 'src/app/services/servicios.service';
+import { ExtractDatePipe } from 'src/app/pipes/extract-date.pipe';
+import { ServicesModule } from 'src/app/services/services.module';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 
 
 
@@ -13,12 +15,15 @@ import { ServiciosService } from 'src/app/services/servicios.service';
   declarations: [
     ListadoPolizasComponent,
     GenerarPolizasComponent,
-    GenerarCotizacionComponent
+    GenerarCotizacionComponent,
+    
   ],
   imports: [
     CommonModule,
-  
-    PolizasRoutingModule
+    HttpClientModule,
+    PolizasRoutingModule,
+    ServicesModule,
+    PipesModule
   ],
   exports: [ 
     ListadoPolizasComponent,
