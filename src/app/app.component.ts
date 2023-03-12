@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit,  ElementRef, HostListener, ViewChild} from '@angular/core';
 import { routeSideNav } from './models/Pages/routes.model';
 
 
@@ -13,15 +13,22 @@ import { routeSideNav } from './models/Pages/routes.model';
   
 ]
 })
+
+
 export class AppComponent implements OnInit {
 
-
-
+  @ViewChild('sidebar') sidebar!: ElementRef;
+  @ViewChild('mobiletoggle') mobileToggle!: ElementRef;
+  
   actualDir : string = 'Dashboard';
   display_sidenav = false;
   lightActive = true;
   darkActive = false;
   
+
+
+  
+
   menuItems : routeSideNav[] = [  
     {
       label: 'Usuarios y Acceso',
@@ -184,21 +191,32 @@ export class AppComponent implements OnInit {
     
   ];
 
-  constructor(private cdr : ChangeDetectorRef){
+  constructor(private cdr : ChangeDetectorRef,
+              private elementRef: ElementRef){
     
   }
+
+
   ngOnInit(){
-    // this.clienteServicio.getClientes() 
-    //   .subscribe((data)=> {
-    //     console.log(data);
-    //   });
+    
+    document.addEventListener('click', this.onDocumentClick.bind(this));
+  }
 
-    // this.clienteServicio.getClienteById(23232323)
-    //   .subscribe((data)=> {
-    //     console.log(data);
-    //   })
-      
 
+  ngOnDestroy() {
+    document.removeEventListener('click', this.onDocumentClick.bind(this));
+  }
+
+  onDocumentClick(event: MouseEvent) {
+    if (this.display_sidenav) {
+      const targetElement = event.target as HTMLElement;
+      const clickedInside = this.sidebar.nativeElement.contains(targetElement);
+      const clickOnButtonMenu = this.mobileToggle.nativeElement.contains(targetElement);
+      if (!clickedInside && !clickOnButtonMenu) {
+        this.display_sidenav = false;
+        this.cdr.detectChanges();
+      }
+    }
   }
 
   cargarHeader(direccion : string){

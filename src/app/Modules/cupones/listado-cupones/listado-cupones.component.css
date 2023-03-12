@@ -27,18 +27,18 @@ table {
       text-align: left;
     }
   
-    table th
-    {
-       font-size: small;
-       text-align: center;
-       
-       border-bottom: 1px solid var(--border-color);
-   }
+      table th
+      {
+        font-size: small;
+        text-align: center;
+        
+        border-bottom: 1px solid var(--border-color);
+    }
 
-   table td{
-     text-align: center;
-     font-size: small;
-   }
+    table td{
+      text-align: center;
+      font-size: small;
+    }
   
       .animated-component {
         /* position: absolute;
